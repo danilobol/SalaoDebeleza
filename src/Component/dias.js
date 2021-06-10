@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {Text, View, Button, Alert, Image, TextInput, TouchableOpacity} from 'react-native';
 
 import styles from '../style/style';
+import ImageBackground from "react-native-web/dist/exports/ImageBackground";
 
 const PresentationComponents = (props) =>{
   return(
@@ -28,8 +29,10 @@ class dias extends Component {
 
       return (
       <View style={styles.containerLogado}>
+          <ImageBackground source={require('../background.png')} style = { { width : '100%' , height : '100%' , flex: '100%', alignItems: 'center',justifyContent: 'center', resizeMode: 'cover'} }>
 
-        <Text style={styles.textGeral}>Escolha o dia para </Text>
+
+          <Text style={styles.textGeral}>Escolha o dia para </Text>
           <Text style={styles.textGeral}>{servico}</Text>
 
         <TouchableOpacity
@@ -56,6 +59,7 @@ class dias extends Component {
           style={styles.buttonSemana} onPress={() => {this.props.navigation.navigate('confirmando', {'dia': 'Sexta','servico': navigation.getParam('servico')}) }}>
             <Text style={styles.buttonTextDias}>Sexta</Text>
         </TouchableOpacity>
+          </ImageBackground>
       </View>
     );
   }

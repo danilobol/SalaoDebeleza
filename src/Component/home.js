@@ -18,6 +18,7 @@ class home extends Component {
     return (
       <View style={styles.containerLogado}>
 
+      <ImageBackground source={require('../background.png')} style = { { width : '100%' , height : '100%' , flex: '100%', alignItems: 'center',justifyContent: 'center', resizeMode: 'cover'} }>
 
 
         <Text style={styles.textNomeHome}>{avisoConfirmacao}</Text>
@@ -42,6 +43,7 @@ class home extends Component {
               style={styles.buttonSair} onPress={() => {this.props.navigation.navigate('login') }}>
               <Text style={styles.buttonTextSair}>Sair</Text>
           </TouchableOpacity>
+      </ImageBackground>
       </View>
     );
   }

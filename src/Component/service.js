@@ -12,8 +12,10 @@ class service extends Component {
   render() {
     return (
       <View style={styles.containerLogado}>
+        <ImageBackground source={require('../background.png')} style = { { width : '100%' , height : '100%' , flex: '100%', alignItems: 'center',justifyContent: 'center', resizeMode: 'cover'} }>
 
-      <Text style={styles.textervico1}>Estes são nossos serviços:</Text>
+
+        <Text style={styles.textervico1}>Estes são nossos serviços:</Text>
       <Text style={styles.textervico2}>Clque Para Agendar:</Text>
 
 
@@ -45,7 +47,7 @@ class service extends Component {
           <Image source={require('../atendimento-de-qualidade.png')} style={styles.imagemIcon} />
 
         </TouchableOpacity>
-
+        </ImageBackground>
       </View>
     );
   }
